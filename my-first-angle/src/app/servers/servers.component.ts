@@ -9,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class ServersComponent implements OnInit {
   /* This is Property Binding */
   allowNewServer = false;
+  serverCreationStatus = 'No server was created.';  // This will be used for Event Binding.
+
   constructor() {
     setTimeout(() => {
       this.allowNewServer = true;
@@ -17,5 +19,10 @@ export class ServersComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  onCreateServer() {
+    this.serverCreationStatus = 'Server Created.';
+  }
+
 
 }
