@@ -6,6 +6,12 @@
 
   Also can use Event Binding to send data from HTML to the TypeScript code.
 </p>
+<label>Server Name (one way data binding)</label>
+<input
+  type="text"
+  class="form-control"
+  (input)="onUpdateServerName($event)">
+<p> String Interpolation => {{ serverName }}</p>
 <!-- this is Property Binding, can tell by the HTML property in []. -->
 <button class="btn btn-primary"
         [disabled]="!allowNewServer"
@@ -15,3 +21,5 @@
 <p>This is String Interpolation: {{ allowNewServer }}</p>
 <app-server></app-server>
 <app-server></app-server>
+
+
