@@ -1,6 +1,8 @@
 <h1>Assignments</h1>
+
 <h2>Data Binding</h2>
 
+<h3>Two-Way Databinding</h3>
 <label for="servername"> enter new server name</label>
 <input
   id="servername"
@@ -10,6 +12,17 @@
   [(ngModel)]="username">
 <!--  same as this => <input [value]="username" (input)="username = $event.target.value">  -->
 <p>
+  <!-- this is String Interpolation -->
   The server name is: {{ username }}.
 </p>
+
+<p>
+  <!-- able to click button only if username is not empty -->
+  <button class="btn btn-primary"
+          [disabled]="!username"
+          (click)="clearUsername()">reset name
+  </button>
+</p>
+
+
 
