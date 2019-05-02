@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AssignmentsComponent implements OnInit {
   username = '';
+  isNameAvailable;
 
   constructor() { }
 
@@ -15,5 +16,10 @@ export class AssignmentsComponent implements OnInit {
 
   clearUsername() {
     this.username = '';
+  }
+
+  // some used this approach
+  onUserNameInput(event: Event) {
+    this.isNameAvailable  = (<HTMLInputElement>event.target).value ? true : false;
   }
 }
