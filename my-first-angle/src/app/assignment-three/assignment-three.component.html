@@ -1,3 +1,36 @@
+<h2>assignment-three works!</h2>
+
+<br>
+<ol>
+  <li> Add A button which says 'Display Details'</li>
+  <li> Add a paragraph with any content of your choice (e.g. 'Secret Password = tuna')</li>
+  <li> Toggle the displaying of that paragraph with the button created in the first step</li>
+  <li>Log all button clicks in an array and output that array below the secret paragraph (maybe log a timestamp or
+    simply an
+    incrementing number)
+  </li>
+  <li>Starting at the 5th log item, give all future log items a blue background (via ngStyle) and white color
+    (ngClass)
+  </li>
+</ol>
+
+<br>
+<label for="detail"> Display Details</label>
+<br>
+<button (click)="toggleDisplay()"
+        class="btn-primary"
+        name="display">Display Details
+</button>
+<p>{{ showPara }}</p>
+<div *ngIf="showPara">
 <p>
-  assignment-three works!
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis dapibus nisi, vel vestibulum massa. Curabitur
+  rhoncus turpis vel dui vehicula, a fermentum nulla molestie. Etiam at libero purus. Vestibulum ut dolor non ipsum
+  ultrices pellentesque. Sed rhoncus leo bibendum lectus commodo, vitae cursus eros ultrices. Phasellus vitae odio
+  rhoncus nisl rhoncus mattis. Nunc tincidunt, diam quis semper gravida, justo turpis auctor ex, ut tincidunt dolor sem
+  at arcu. Maecenas rutrum, erat ut mattis pellentesque, ipsum sapien mollis nulla, molestie pharetra massa felis vitae
+  turpis. Sed laoreet commodo lacus, eu efficitur erat commodo vel.
 </p>
+</div>
+
+
