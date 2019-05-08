@@ -6,8 +6,7 @@
   <li> Add a paragraph with any content of your choice (e.g. 'Secret Password = tuna')</li>
   <li> Toggle the displaying of that paragraph with the button created in the first step</li>
   <li>Log all button clicks in an array and output that array below the secret paragraph (maybe log a timestamp or
-    simply an
-    incrementing number)
+    simply an incrementing number)
   </li>
   <li>Starting at the 5th log item, give all future log items a blue background (via ngStyle) and white color
     (ngClass)
@@ -21,7 +20,7 @@
         class="btn-primary"
         name="display">Display Details
 </button>
-<p>{{ showPara }}</p>
+<p>Watching the changing values => {{ showPara }}</p>
 <div *ngIf="showPara">
 <p>
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis dapibus nisi, vel vestibulum massa. Curabitur
@@ -32,5 +31,12 @@
   turpis. Sed laoreet commodo lacus, eu efficitur erat commodo vel.
 </p>
 </div>
+<p>The number of times the button has been pressed.</p>
+<p *ngFor="let click of theClicks"
+  [ngStyle]="{backgroundColor: getColor()}"
+   [ngClass]="{large: counter > 4}"
+       >{{click}}</p>
+
+
 
 

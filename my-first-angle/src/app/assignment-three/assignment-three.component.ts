@@ -3,22 +3,34 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-assignment-three',
   templateUrl: './assignment-three.component.html',
-  styleUrls: ['./assignment-three.component.css']
+  styles: [`
+    .large {
+      color: white
+  }
+  `]
 })
 export class AssignmentThreeComponent implements OnInit {
-  showPara: boolean = true;
+  showPara = true;
+  counter = 0;
+  theClicks = [];
   constructor() { }
 
   ngOnInit() {
   }
 
   toggleDisplay(): void {
-    if (this.showPara) {
-      this.showPara = false;
-    } else {
-      this.showPara = true;
-    }
+    this.showPara = !this.showPara;
+    // increment the counter and add to array
+    this.counter = this.counter + 1;
+    this.theClicks.push('The button has been pressed: ' + this.counter);
   }
 
 
+  getColor() {
+    if (this.counter > 4) {
+      return 'blue';
+    } else if (this.counter <= 4) {
+      return 'transparent';
+    }
+  }
 }
